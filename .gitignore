@@ -8,3 +8,7 @@
 build
 classes
 logs
+
+.classpath
+.project
+.settings/
