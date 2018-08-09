@@ -1,6 +1,5 @@
 package com.springfans.xud.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.springfans.xud.domain.Pair;
 import com.springfans.xud.rpc.XudClient;
 import com.springfans.xud.service.XudCancelOrderService;
@@ -28,8 +27,6 @@ public class XudProxyServiceController {
 
     @Autowired
     private XudClient xudClient;
-
-    private ObjectMapper objectMapper = new ObjectMapper();
 
     @PostMapping("/place-order")
     public void placeOrder(
