@@ -1,10 +1,10 @@
-.idea
 *.iws
 *.iml
 *.ipr
 
+.idea
 .gradle
+
 build
 classes
-
-logs/
+logs
