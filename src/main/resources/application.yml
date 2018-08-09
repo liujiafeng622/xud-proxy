@@ -1,0 +1,41 @@
+server:
+  port: 55555
+
+spring:
+  jackson:
+    serialization:
+      WRITE_BIGDECIMAL_AS_PLAIN: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1/szjys?useSSL=false
+    username: dev
+    password: dev
+    driver-class-name: com.mysql.jdbc.Driver
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: true
+    status-page-url-path: /management/info
+    health-check-url-path: /management/health
+    metadata-map:
+      management.context-path: /management
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://registry.springfans.org/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+management:
+  security:
+    enabled: false
+  context-path: /management
+
+logging:
+  level:
+    ROOT: INFO
+    com.springfans: DEBUG
+
+xud-proxy:
+    host: 192.168.220.130
+    port: 8886
